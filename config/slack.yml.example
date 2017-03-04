@@ -1,0 +1,9 @@
+staging: &defaults
+  payload:
+    channel: '#assetcore'
+    username: minabot
+  token: ~
+  hook_url: https://assetcore.slack.com/services/hooks/incoming-webhook?token=
+
+production:
+  <<: *defaults

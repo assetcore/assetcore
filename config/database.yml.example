@@ -1,0 +1,16 @@
+development: &defaults
+  adapter: mysql2
+  encoding: utf8
+  database: assetcore_development
+  username: root
+  password:
+  pool: 10
+  reconnect: true
+
+test:
+  <<: *defaults
+  database: assetcore_test
+
+production:
+  <<: *defaults
+  database: assetcore_production
