@@ -1,0 +1,9 @@
+#create file
+touch config/initializers/mysql2_adapter.rb
+#add lines
+echo "require 'active_record/connection_adapters/mysql2_adapter'" >> config/initializers/mysql2_adapter.rb
+echo "class ActiveRecord::ConnectionAdapters::Mysql2Adapter" >> config/initializers/mysql2_adapter.rb
+echo "NATIVE_DATABASE_TYPES[:primary_key] = "int(11) auto_increment PRIMARY KEY"" >> config/initializers/mysql2_adapter.rb
+echo "end" >> config/initializers/mysql2_adapter.rb
+#add line to everionment
+echo "require File.expand_path('../initializers/mysql2_adapter', __FILE__)" >> everionment.rb
