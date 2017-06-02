@@ -63,6 +63,10 @@ bundle install
 #Deploy Database
 bundle exec rake db:setup
 
+mysql -u root -p assetcore_development -e "UPDATE members SET activated = '1' WHERE id='1'"
+mysql -u root -p assetcore_development -e "UPDATE id_documents SET aasm_state = 'verified' WHERE id='1'"
+mysql -u root -p assetcore_development -e "UPDATE two_factors SET activated = '0' WHERE id='1'"
+
 # Starting all daemons
 bundle exec rake daemons:start
 
