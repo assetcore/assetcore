@@ -3,7 +3,7 @@ defaults: &defaults
   # sites hosts
   # session expire seconds
   # admin role account
-  URL_HOST: assetcore.dev:3000
+  URL_HOST: localhost:3000
   URL_SCHEMA: http
   SESSION_EXPIRE: 60
   ADMIN: 'admin@assetcore.dev,admin@example.com'
